@@ -1,6 +1,6 @@
 // main entry point (e.g., src/js/index.js)
 
-import "../styles/index.css";
+import "../styles/index.scss";
 import { initPageRouter } from "./utils/pageRouter";
 
 document.addEventListener("DOMContentLoaded", () => {

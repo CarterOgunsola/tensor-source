@@ -1,0 +1,26 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.swiper-slide {
+  height: auto !important;
+  display: flex !important;
+}
+
+
+[data-button-next], [data-button-prev] {
+  [data-hover-path] {
+    stroke-dasharray: var(--length);
+    stroke-dashoffset: var(--length);
+    transition: stroke-dashoffset 0.5s ease;
+
+    
+  }
+
+  &:hover {
+       [data-hover-path] {
+        stroke-dashoffset: 0;
+       }
+    }
+}
