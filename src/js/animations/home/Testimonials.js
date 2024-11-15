@@ -31,7 +31,7 @@ export default class {
     paths.forEach(path => {
       const length = path.getTotalLength();
 
-      path.style.setProperty("--length", length)
+      path.style.setProperty("--length", length + 1)
 
     })
   }
