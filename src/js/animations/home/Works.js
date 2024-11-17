@@ -18,7 +18,7 @@ export default class {
     this.elements.steps.forEach((step, index) => {
       ScrollTrigger.create({
         trigger: step,
-        start: "top 20%",
+        start: "top 30%",
         end: "bottom top",
         // markers: true,
         onEnter: () => {
