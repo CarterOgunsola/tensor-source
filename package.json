@@ -13,7 +13,7 @@
     "vite": "^5.0.4"
   },
   "dependencies": {
-    "gsap": "^3.12.5",
+    "gsap": "./gsap-bonus.tgz",
     "swiper": "^11.1.14"
   }
 }
