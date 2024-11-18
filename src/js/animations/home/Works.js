@@ -34,7 +34,7 @@ export default class {
             immediateRender: false,
             start: "top top",
             scrub: true,
-            markers: true,
+            // markers: true,
           },
         }
       );
