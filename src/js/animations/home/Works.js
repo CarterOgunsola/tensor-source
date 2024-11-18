@@ -15,28 +15,38 @@ export default class {
   }
 
   createTriggers() {
+    const { mainSvg } = this.elements;
+
     this.elements.steps.forEach((step, index) => {
-      ScrollTrigger.create({
-        trigger: step,
-        start: "top 30%",
-        end: "bottom top",
-        // markers: true,
-        onEnter: () => {
-          this.morphSVG(index);
-        },
-        onEnterBack: () => {
-          this.morphSVG(index);
-        },
-      });
+      if (index === this.elements.svgs.length - 1) return;
+
+      const target = this.elements.svgs[index];
+      const next = this.elements.svgs[index + 1];
+      gsap.to(
+        mainSvg,
+
+        {
+          morphSVG: next,
+
+          scrollTrigger: {
+            trigger: step,
+            duration: 1,
+            immediateRender: false,
+            start: "top top",
+            scrub: true,
+            markers: true,
+          },
+        }
+      );
     });
   }
 
-  morphSVG(index) {
-    const target = this.elements.svgs[index].getAttribute("d");
-    gsap.to(this.elements.mainSvg, {
-      morphSVG: {
-        shape: target,
-      },
-    });
-  }
+  // morphSVG(index) {
+  //   const target = this.elements.svgs[index].getAttribute("d");
+  //   gsap.to(this.elements.mainSvg, {
+  //     morphSVG: {
+  //       shape: target,
+  //     },
+  //   });
+  // }
 }
