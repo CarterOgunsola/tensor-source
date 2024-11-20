@@ -6,21 +6,27 @@ body {
 .swiper-slide {
   height: auto !important;
   display: flex !important;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 
+.swiper-slide-active {
+  opacity: 1 !important;
+  visibility: visible !important;
+}
 
-[data-button-next], [data-button-prev] {
+[data-button-next],
+[data-button-prev] {
   [data-hover-path] {
     stroke-dasharray: var(--length);
     stroke-dashoffset: var(--length);
     transition: stroke-dashoffset 0.5s ease;
-
-    
   }
 
   &:hover {
-       [data-hover-path] {
-        stroke-dashoffset: 0;
-       }
+    [data-hover-path] {
+      stroke-dashoffset: 0;
     }
+  }
 }

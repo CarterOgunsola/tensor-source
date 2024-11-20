@@ -31,9 +31,12 @@ export default class {
           scrollTrigger: {
             trigger: step,
             duration: 1,
+            ease: "power2.inOut",
             immediateRender: false,
             start: "top top",
-            scrub: true,
+            scrub: 1,
+            smoothness: 0.75,
+            anticipation: 0.2,
             // markers: true,
           },
         }
